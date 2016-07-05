@@ -1,9 +1,13 @@
 $white:#fff;
 $section-bg:#191B1A;
 $green:#21CE77;
+$social-fonts:#191B1A;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
 body{
     margin:0;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 ::selection{
@@ -47,11 +51,10 @@ header{
 
 footer{
   width: 100%;
-  height: 300px;
-  background: gray;
-  bottom: -300px;
-  position: fixed;
-  z-index: -1;
+  //height:100vh;
+  background:$green;
+  position:absolute;
+  bottom:0;
 }
 
 .content{
@@ -81,10 +84,6 @@ footer{
         border-bottom:2px $white solid;
         margin-bottom:10px;
     }
-}
-
-footer h1{
-//   line-height: 300px;
 }
 
 header,
@@ -126,11 +125,10 @@ footer,
     }
 }
 
-
-
 .section-timeline{
     background:$section-bg;
-    margin:20px 0;
+    margin:0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     h2{
         text-align:center;
         color:$white;
@@ -148,7 +146,7 @@ footer,
   background: rgba(255, 255, 255, 0.03);
   color: rgba(255, 255, 255, 0.8);
   font-family: 'Source Sans Pro', sans-serif;
-  margin: 50px auto;
+  margin:0 30px;
   letter-spacing: 0.5px;
   position: relative;
   line-height: 1.4em;
@@ -212,4 +210,42 @@ footer,
   font-weight: 100;
   font-size: 0.9em;
   min-width: 120px;
+}
+
+
+.mail{
+    text-align:center;
+    padding:20px;
+    color:$social-fonts;
+    font-size:36px;
+    font-style:italic;
+    &:before{
+        content:'';
+        position:absolute;
+        margin-top:90px;
+        width:70px;
+        height:3px;
+        left:50%;
+        margin-left:-35px;
+        background:$social-fonts;
+    }
+}
+
+.socials{
+    position:relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding:30px 0;
+    margin:0 10%;
+    top:25px;
+    .social-icon{
+        font-size:32px;
+        padding:0 10px;
+        margin: 0 auto;
+        border-radius:6px;
+        a{
+            color:$social-fonts;
+        }
+    }
 }
