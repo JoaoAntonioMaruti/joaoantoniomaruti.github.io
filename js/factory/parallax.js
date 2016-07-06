@@ -20,11 +20,11 @@ angular.module('app.parallax', [])
             });
             window.onscroll = function(){
                 var scroll = window.scrollY;
-        
+
                 angular.element('#scroll-animate-main').css({
                     'top' : '-' + scroll + 'px'
                 });
-                
+
                 angular.element('header').css({
                     'background-position-y' : 50 - (scroll * 100 / heightDocument) + '%'
                 });
