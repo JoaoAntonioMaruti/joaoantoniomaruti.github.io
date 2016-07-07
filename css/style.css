@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
   margin: 0;
   font-family: 'Open Sans Condensed', sans-serif; }
@@ -52,7 +53,7 @@ footer {
 
 .me {
   color: #fff;
-  position: absolute;
+  position: fixed;
   width: 500px;
   border: solid;
   top: 50%;
@@ -60,7 +61,8 @@ footer {
   margin-top: -110px;
   margin-left: -250px;
   padding: 20px;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; }
   .me .name {
     font-size: 54px;
     border-bottom: 2px #fff solid;
@@ -89,6 +91,7 @@ footer,
   box-shadow: 0 0 0 transparent, 0 3px 0 transparent;
   background: transparent; }
   .header-bar a {
+    padding: 0 25px;
     transition: all 0.2s ease-in-out; }
 
 .header-style-bar {
@@ -145,21 +148,6 @@ footer,
       width: 11px;
       content: "";
       top: 5px; }
-
-.glow-button {
-  background: #21CE77;
-  padding: 10px 15px;
-  color: #fff;
-  width: 150px;
-  z-index: 1;
-  text-decoration: none;
-  border-radius: 40px;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  text-align: center;
-  margin-left: -75px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.7), 0 10px 12px rgba(0, 0, 0, 0.32); }
 
 .timeline .event:before,
 .timeline .event:after {
@@ -219,5 +207,64 @@ footer,
   background: #1f2120;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.fork-git {
+  position: fixed;
+  z-index: 9;
+  right: 0; }
+
+.mouse {
+  position: absolute;
+  width: 22px;
+  height: 42px;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  -webkit-animation: intro 1s;
+  animation: intro 1s; }
+  .mouse .scroll {
+    display: block;
+    width: 3px;
+    height: 3px;
+    margin: 6px auto;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-animation: finger 1s infinite;
+    animation: finger 1s infinite; }
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@keyframes intro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+    transform: translateY(40px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@-webkit-keyframes finger {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
+@keyframes finger {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
 
 /*# sourceMappingURL=style.css.map */
