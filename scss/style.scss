@@ -2,6 +2,7 @@ $white:#fff;
 $section-bg:#191B1A;
 $green:#21CE77;
 $social-fonts:#191B1A;
+$fundo-escuro:#1f2120;
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
@@ -161,6 +162,9 @@ footer,
       padding-bottom: 25px;
       margin-bottom: 50px;
       position: relative;
+      h3{
+          cursor:pointer;
+      }
       &:last-of-type {
           padding-bottom: 0;
           margin-bottom: 0;
@@ -214,6 +218,8 @@ footer,
 
 
 .mail{
+    position:relative;
+    top:22px;
     text-align:center;
     padding:20px;
     color:$social-fonts;
@@ -248,4 +254,15 @@ footer,
             color:$social-fonts;
         }
     }
+}
+
+.info{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    height: calc(100% - 40px);
+    width: 62%;
+    background:$fundo-escuro;
+    border-radius:4px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }

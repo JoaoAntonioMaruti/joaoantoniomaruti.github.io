@@ -1,13 +1,4 @@
-<nav class="header-bar">
-    <ul>
-        <li>
-            <a class="waves-effect waves-light">Home</a>
-        </li>
-        <li>
-            <a class="waves-effect waves-light">Blog</a>
-        </li>
-    </ul>
-</nav>
+<nav-menu></nav-menu>
 
 <div id="scroll-animate">
   <div id="scroll-animate-main">
@@ -28,42 +19,29 @@
           <!--<h2 class="h2-timeline">Timeline</h2>-->
           <ul class="timeline">
             <li class="event">
-                  <h3>Registration</h3>
-                  <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
+              <h3>Sobre</h3>
             </li>
             <li class="event">
-                  <h3>Opening Ceremony</h3>
-                  <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP & Busta Rhymes as an opening show.</p>    
+              <h3>Projetos</h3>
             </li>
             <li class="event">
-                  <h3>Main Event</h3>
-                  <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get ready!</p>    
+              <h3>Formação</h3>
             </li>
             <li class="event">
-                  <h3>Closing Ceremony</h3>
-                  <p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>    
+              <h3>Skills</h3>
             </li>
           </ul>
+          <div class="info">
+              
+          </div>
         </section>
       <footer>
         <p class="mail">
-            joaoantoniomaruti@gmail.com
+            {{me.email}}
         </p>
         <div class="socials">
-            <div class="social-icon waves-effect waves-light">
-                <a class="ion-social-linkedin"></a>
-            </div>
-            <div class="social-icon waves-effect waves-light">
-                <a class="ion-social-facebook"></a>
-            </div>
-            <div class="social-icon waves-effect waves-light">
-                <a class="ion-social-instagram"></a>
-            </div>
-            <div class="social-icon waves-effect waves-light">
-                <a class="ion-social-github"></a>
-            </div>
-            <div class="social-icon waves-effect waves-light">
-                <a class="ion-social-codepen"></a>
+            <div class="social-icon waves-effect waves-light" ng-repeat="social in socials">
+                <a href="{{social.link}}" target="_blank" ng-class="social.icon"></a>
             </div>
         </div>
       </footer>

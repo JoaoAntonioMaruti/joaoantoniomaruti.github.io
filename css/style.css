@@ -130,6 +130,8 @@ footer,
     padding-bottom: 25px;
     margin-bottom: 50px;
     position: relative; }
+    .timeline .event h3 {
+      cursor: pointer; }
     .timeline .event:last-of-type {
       padding-bottom: 0;
       margin-bottom: 0;
@@ -175,6 +177,8 @@ footer,
   min-width: 120px; }
 
 .mail {
+  position: relative;
+  top: 22px;
   text-align: center;
   padding: 20px;
   color: #191B1A;
@@ -205,5 +209,15 @@ footer,
     border-radius: 6px; }
     .socials .social-icon a {
       color: #191B1A; }
+
+.info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: calc(100% - 40px);
+  width: 62%;
+  background: #1f2120;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 /*# sourceMappingURL=style.css.map */
