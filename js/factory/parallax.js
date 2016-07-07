@@ -41,8 +41,9 @@ angular.module('app.parallax', [])
     var max2state = 400;
     var oldScrollY = 0;
     var applyBlur =function(el,value){
+        var blur = value / 150;
         angular.element(el).css({
-            "-webkit-filter": "blur("+ value / 100 +"px)", "filter": "blur("+ value / 100 +"px)"
+            "-webkit-filter": "blur("+ blur+"px)", "filter": "blur("+ blur +"px)"
         });
     }
     return {
