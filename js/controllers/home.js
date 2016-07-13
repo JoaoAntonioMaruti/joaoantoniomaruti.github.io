@@ -59,4 +59,18 @@ angular.module('app.home', [])
         icon:'ion-social-codepen'
         , link:'http://codepen.io/JoaoAntonioMaruti'
     },];
+
+    $scope.skills = [{
+        name:'JavaScript'
+        , percent:100
+    },{
+        name:'jQuery'
+        , percent:80
+    },{
+        name:'AngularJS'
+        , percent:95
+    },{
+        name:'NodeJS'
+        , percent:75
+    }];
 });

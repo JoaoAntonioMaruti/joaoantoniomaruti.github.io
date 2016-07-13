@@ -30,12 +30,14 @@
             <li class="event">
               <h3>Formação</h3>
             </li>
-            <li class="event">
+            <li class="event" ng-click="showSkills = true">
               <h3>Skills</h3>
             </li>
           </ul>
           <div class="info">
-              
+              <div ng-if="showSkills">
+                {{skills}}
+              </div>
           </div>
         </section>
       <footer>
