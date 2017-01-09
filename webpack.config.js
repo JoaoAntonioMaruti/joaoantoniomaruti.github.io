@@ -5,7 +5,7 @@ let environment = './src/';
 module.exports = {
     entry: environment + 'app.js',
     output: {
-        path: environment + '../public', 
+        path: environment + '../build', 
         filename: 'bundle.js'
     },
     module: {
