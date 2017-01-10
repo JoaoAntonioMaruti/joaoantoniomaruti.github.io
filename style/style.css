@@ -3,6 +3,7 @@
 
 html,
 body {
+  margin: 0;
   background-color: #FEDCC8; }
 
 .parallax {
@@ -57,3 +58,32 @@ body {
 
 .parallax__layer__6 {
   transform: translateZ(0px) scale(1); }
+
+.app-header {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  z-index: 99;
+  transition: all 0.2s ease-in-out; }
+  .app-header ul {
+    display: flex;
+    list-style: none;
+    border-bottom: solid 2px transparent; }
+    .app-header ul li {
+      padding: 10px;
+      transition: all 0.2s ease-in-out; }
+      .app-header ul li a {
+        color: #fff;
+        font-size: 22px;
+        text-decoration: none;
+        text-transform: uppercase; }
+      .app-header ul li:hover {
+        border-bottom: solid 2px; }
+
+.app-header-active {
+  background: #25aa25;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+ul {
+  margin: 0;
+  padding: 0; }

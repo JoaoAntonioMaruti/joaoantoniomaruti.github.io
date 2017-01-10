@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(185);
+	module.exports = __webpack_require__(186);
 
 
 /***/ },
@@ -21802,6 +21802,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Header = __webpack_require__(185);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21818,52 +21820,65 @@
 
 	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
 
-	    console.log('Rodou');
+	    _this.state = {
+	      scroll: 0
+	    };
+	    _this.handleScroll = _this.handleScroll.bind(_this);
 	    return _this;
 	  }
 
 	  _createClass(Home, [{
+	    key: 'handleScroll',
+	    value: function handleScroll(event) {
+	      this.setState({ scroll: event.target.scrollTop });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'parallax' },
+	        { onScroll: this.handleScroll },
+	        _react2.default.createElement(_Header.Header, { scroll: this.state.scroll }),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'parallax__layer parallax__layer__0' },
-	          _react2.default.createElement('img', { src: './assets/l1.png' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'parallax__layer parallax__layer__1' },
-	          _react2.default.createElement('img', { src: './assets/l2.png' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'parallax__layer parallax__layer__2' },
-	          _react2.default.createElement('img', { src: './assets/l3.png' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'parallax__layer parallax__layer__3' },
-	          _react2.default.createElement('img', { src: './assets/l4.png' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'parallax__layer parallax__layer__4' },
-	          _react2.default.createElement('img', { src: './assets/l5.png' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'parallax__layer parallax__layer__5' },
-	          _react2.default.createElement('img', { src: './assets/l6.png' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'parallax__layer parallax__layer__6' },
-	          _react2.default.createElement('img', { src: './assets/l7.png' })
-	        ),
-	        _react2.default.createElement('div', { className: 'parallax__cover' })
+	          { className: 'parallax' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__0' },
+	            _react2.default.createElement('img', { src: './assets/l1.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__1' },
+	            _react2.default.createElement('img', { src: './assets/l2.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__2' },
+	            _react2.default.createElement('img', { src: './assets/l3.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__3' },
+	            _react2.default.createElement('img', { src: './assets/l4.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__4' },
+	            _react2.default.createElement('img', { src: './assets/l5.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__5' },
+	            _react2.default.createElement('img', { src: './assets/l6.png' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'parallax__layer parallax__layer__6' },
+	            _react2.default.createElement('img', { src: './assets/l7.png' })
+	          ),
+	          _react2.default.createElement('div', { className: 'parallax__cover' })
+	        )
 	      );
 	    }
 	  }]);
@@ -21873,6 +21888,93 @@
 
 /***/ },
 /* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Header = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Header = exports.Header = function (_React$Component) {
+	    _inherits(Header, _React$Component);
+
+	    function Header(props) {
+	        _classCallCheck(this, Header);
+
+	        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+	    }
+
+	    _createClass(Header, [{
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'app-header ' + (this.props.scroll > 100 ? 'app-header-active' : '') },
+	                _react2.default.createElement(
+	                    'ul',
+	                    null,
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            'Me'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            'Projects'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            'About'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                            'a',
+	                            { href: '#' },
+	                            'Contact'
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Header;
+	}(_react2.default.Component);
+
+/***/ },
+/* 186 */
 /***/ function(module, exports) {
 
 	'use strict';

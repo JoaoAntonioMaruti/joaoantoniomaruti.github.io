@@ -6,7 +6,7 @@ const gulp = require('gulp'),
 gulp.task('sass', () => {
   return gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./style'));
 });
  
 gulp.task('sass:watch', () => {
