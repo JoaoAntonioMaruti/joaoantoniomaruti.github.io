@@ -7,7 +7,7 @@ export class Header extends React.Component {
 
     render(){
         return (
-            <div  className={`app-header ${this.props.scroll > 100 ? 'app-header-active' : ''}`}>
+            <div  className={`app-header ${this.props.scroll > 100 ? '-app-header-active' : ''}`}>
                 <ul>
                     <li>
                         <a href="#">Me</a>

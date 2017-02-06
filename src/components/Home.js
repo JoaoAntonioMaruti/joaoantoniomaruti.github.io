@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from './Header';
+import { Parallax } from './Parallax';
 
 export class Home extends React.Component {
     constructor(props) {
@@ -18,31 +19,12 @@ export class Home extends React.Component {
         return (
             <div onScroll={this.handleScroll}>
               <Header scroll={ this.state.scroll } />
-              <h1 className={'about'}>I'm João</h1>
-              <div className={'parallax'}>
-                <div className={'parallax__layer parallax__layer__0'}>
-                  <img src={'./assets/l1.png'} />
-                </div>
-                <div className={'parallax__layer parallax__layer__1'}>
-                  <img src={'./assets/l2.png'} />
-                </div>
-                <div className={'parallax__layer parallax__layer__2'}>
-                  <img src={'./assets/l3.png'} />
-                </div>
-                <div className={'parallax__layer parallax__layer__3'}>
-                  <img src={'./assets/l4.png'} />
-                </div>
-                <div className={'parallax__layer parallax__layer__4'}>
-                  <img src={'./assets/l5.png'} />
-                </div>
-                <div className={'parallax__layer parallax__layer__5'}>
-                  <img src={'./assets/l6.png'} />
-                </div>
-                <div className={'parallax__layer parallax__layer__6'}>
-                  <img src={'./assets/l7.png'} />
-                </div>
-                <div className={'parallax__cover'}></div>
+              <div className={'about'}>Hello, I'm João 
+                <span className={'small'}>
+                  Front-end enginer
+                </span>
               </div>
+              <Parallax />
             </div>
         );
     }
