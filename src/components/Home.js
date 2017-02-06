@@ -18,6 +18,7 @@ export class Home extends React.Component {
         return (
             <div onScroll={this.handleScroll}>
               <Header scroll={ this.state.scroll } />
+              <h1 className={'about'}>I'm João</h1>
               <div className={'parallax'}>
                 <div className={'parallax__layer parallax__layer__0'}>
                   <img src={'./assets/l1.png'} />
