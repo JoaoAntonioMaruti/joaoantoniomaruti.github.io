@@ -46,6 +46,7 @@ body{
   right: 0;
   height: 2000px;
   z-index: 2;
+  width:100%;
 }
 
 $parallax__layers: 6;
@@ -105,7 +106,7 @@ ul{
   padding:0px 15px;
   white-space: nowrap;
   overflow: hidden;
-  -webkit-animation: typing 5s steps(21, end),
+  -webkit-animation: typing 3s steps(21, end),
    blink-caret .5s step-end infinite alternate;
   .small{
      font-size:26px;
@@ -117,31 +118,32 @@ ul{
 .skills-diagram {
   font-size: 16px;
   font-weight: bold;
-  text-align: center;
-  max-width: 35em;
-  margin: 2em auto 2em;
+  text-align:center;
+  dl{
+    position: relative;
+    max-width: 30%;
+    left: 50%;
+    dd{
+      display: none;
+    }
+  }
+  dt {
+    display: inline-block;
+    vertical-align: top;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    -webkit-transform: scale(1.2);
+  	-moz-transform: scale(1.2);
+  	-o-transform: scale(1.2);
+  	-ms-transform: scale(1.2);
+  	transform: scale(1.2);
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+  }
 }
-.skills-diagram > dd {
-  /* Hide inner attributes */
-  display: none;
-}
-.skills-diagram dt {
-  display: inline-block;
-  vertical-align: top;
-  
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 50%;
-  
-  -webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	transform: scale(1.2);
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-}
+
 
 .skills-diagram dt:hover {
 	transition: all 0.2s ease-in-out;
@@ -155,7 +157,6 @@ ul{
 /* Support vertical mode */
 .skills-diagram-vertical dt {
   display: block;
-  /* .25em is an equivalent to inline-block's horizontal whitespace margin */
   margin: .25em auto;
 }
 
@@ -164,14 +165,12 @@ ul{
   width: 2em;
   height: 2em;
   line-height: 2em;
-  
   background-color: rgba(201, 155, 129, .3);
   border-color: rgba(201, 155, 129, 1);
   color: rgba(201, 155, 129, 1);
 }
 .skills-diagram .skill-3 {
   vertical-align: middle;
-  
   width: 3em;
   height: 3em;
   line-height: 3em;
@@ -183,14 +182,12 @@ ul{
   width: 4em;
   height: 4em;
   line-height: 4em;
-  
   background-color: rgba(234, 112, 97, .3);
   border-color: rgba(234, 112, 97, 1);
   color: rgba(234, 112, 97, 1);
 }
 .skills-diagram .skill-5 {
   vertical-align: bottom;
-
   width: 5em;
   height: 5em;
   line-height: 5em;
@@ -200,11 +197,9 @@ ul{
 }
 .skills-diagram .skill-6 {
   vertical-align: top;
-  
   width: 6em;
   height: 6em;
   line-height: 6em;
-  
   background-color: rgba(195, 192, 100, .3);
   border-color: rgba(195, 192, 100, 1);
   color: rgba(195, 192, 100, 1);
@@ -213,14 +208,12 @@ ul{
   width: 7em;
   height: 7em;
   line-height: 7em;
-  
   background-color: rgba(214, 89, 102, .3);
   border-color: rgba(214, 89, 102, 1);
   color: rgba(214, 89, 102, 1);
 }
 .skills-diagram .skill-8 {
   vertical-align: bottom;
-  
   width: 8em;
   height: 8em;
   line-height: 8em;
@@ -243,4 +236,14 @@ ul{
   background-color: rgba(81, 112, 144, .3);
   border-color: rgba(81, 112, 144, 1);
   color: rgba(81, 112, 144, 1);
+}
+
+// test center div css
+.center-div{
+  width:300px;
+  height:300px;
+  background:red;
+  position:relative;
+  left:50%;
+  margin-left:-150px;
 }
