@@ -3,11 +3,15 @@ import React from 'react';
 export class Header extends React.Component {
     constructor(props){
         super(props);
+        this.menu = [{
+            name:'Me',
+            link:'#'
+        }];
     }
 
     render(){
         return (
-            <div  className={`app-header ${this.props.scroll > 100 ? '-app-header-active' : ''}`}>
+            <div  className={`app-header ${this.props.scroll > 150 ? 'app-header-active' : ''}`}>
                 <ul>
                     <li>
                         <a href="#">Me</a>

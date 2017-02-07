@@ -21922,7 +21922,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'app-header ' + (this.props.scroll > 100 ? '-app-header-active' : '') },
+	                { className: 'app-header ' + (this.props.scroll > 150 ? 'app-header-active' : '') },
 	                _react2.default.createElement(
 	                    'ul',
 	                    null,
@@ -22015,8 +22015,13 @@
 	        value: function render() {
 	            var _this2 = this;
 
+	            var grayFilter = {
+	                '-webkit-filter': 'grayscale(' + this.props.filter / 2 + '%)',
+	                filter: 'grayscale(' + this.props.filter / 2 + '%)'
+	            };
+
 	            var contentTop = {
-	                'marginTop': -this.props.filter
+	                'marginTop': -(this.props.filter / 2)
 	            };
 
 	            return _react2.default.createElement(
@@ -22032,7 +22037,15 @@
 	                            _react2.default.createElement('img', { src: layer, className: _this2.props.filter > 150 ? 'night' : '' })
 	                        );
 	                    }),
-	                    _react2.default.createElement('div', { className: 'parallax__cover' })
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'parallax__cover ' + (this.props.filter > 150 ? 'parallax__cover__night' : '') },
+	                        _react2.default.createElement(
+	                            'h1',
+	                            null,
+	                            'Skills'
+	                        )
+	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',

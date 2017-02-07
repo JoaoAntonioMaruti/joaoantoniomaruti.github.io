@@ -54,12 +54,14 @@ body {
 .parallax__cover {
   background: #2D112B;
   position: absolute;
+  height: 1000px;
   top: 100%;
   z-index: 2;
-  width: 100%; }
-  .parallax__cover .about-title {
-    color: #fff;
-    text-align: center; }
+  width: 100%;
+  transition: all .8s ease-in-out; }
+
+.parallax__cover__night {
+  background: #191919; }
 
 .content {
   position: absolute;
@@ -100,19 +102,18 @@ body {
     list-style: none;
     border-bottom: solid 2px transparent; }
     .app-header ul li {
-      padding: 10px;
-      transition: all 0.2s ease-in-out; }
+      padding: 10px; }
       .app-header ul li a {
-        color: #fff;
+        color: #2D112B;
         font-size: 22px;
         text-decoration: none;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        transition: all .8s ease-in-out; }
       .app-header ul li:hover {
         border-bottom: solid 2px; }
 
-.app-header-active {
-  background: #25aa25;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+.app-header-active ul li a {
+  color: #fff; }
 
 ul {
   margin: 0;

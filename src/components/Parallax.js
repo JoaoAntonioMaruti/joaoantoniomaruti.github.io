@@ -17,8 +17,13 @@ export class Parallax extends React.Component {
     }
     
     render(){
+        let grayFilter = {
+            '-webkit-filter': `grayscale(${this.props.filter / 2}%)`,
+            filter: `grayscale(${this.props.filter / 2}%)`
+        }
+        
         let contentTop = {
-            'marginTop': (-this.props.filter)
+            'marginTop': (-(this.props.filter / 2))
         };
         
         return (
@@ -33,7 +38,12 @@ export class Parallax extends React.Component {
                         );
                     })
                 }
-                <div className={'parallax__cover'}>
+                <div className={`parallax__cover ${this.props.filter > 150 ? 'parallax__cover__night' : ''}`}>
+                    <h1>Skills</h1>
+                  {
+                    //<Skills />
+                    // <div className={'center-div'}></div>
+                  }
                 </div>
               </div>
               <div className={`content`} style={ contentTop }>
