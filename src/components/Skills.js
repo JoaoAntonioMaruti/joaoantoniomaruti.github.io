@@ -7,6 +7,38 @@ export class Skills extends React.Component {
             {
                 value:5,
                 name:'Stylus'
+            },
+            {
+                value:10,
+                name:'JavaScript'
+            },
+            {
+                value:4,
+                name:'TDD'
+            },
+            {
+                value:8,
+                name:'SCSS'
+            },
+            {
+                value:4,
+                name:'Regex'
+            },
+            {
+                value:8,
+                name:'Ionic'
+            },
+            {
+                value:5,
+                name:'UI/UX'
+            },
+            {
+                value:9,
+                name:'AngularJS'
+            },
+            {
+                value:7,
+                name:'React'
             }
         ];
     }
@@ -14,24 +46,18 @@ export class Skills extends React.Component {
         return (
             <div className={'skills-diagram'}>
                 <dl>
-                  <dt className={'skill-5'}>Stylus</dt>
-                  <dd>5</dd>
-                  <dt className={'skill-10'}>JavaScript</dt>
-                  <dd>10</dd>
-                  <dt className={'skill-6'}>TDD</dt>
-                  <dd>3</dd>
-                  <dt className={'skill-8'}>SCSS</dt>
-                  <dd>8</dd>
-                  <dt className={'skill-4'}>Regex</dt>
-                  <dd>4</dd>
-                  <dt className={'skill-8'}>Ionic</dt>
-                  <dd>6</dd>
-                  <dt className={'skill-5'}>UI/UX</dt>
-                  <dd>5</dd>
-                  <dt className={'skill-9'}>AngularJS</dt>
-                  <dd>9</dd>
-                  <dt className={'skill-7'}>React</dt>
-                  <dd>7</dd>
+                    {
+                        this.skills.map((skill, index) => {
+                          return (
+                            <div key={index}>
+                              <dt className={`skill-${skill.value}`}>
+                                { skill.name }
+                              </dt>
+                              <dd>{ skill.value }</dd>
+                            </div>
+                          );
+                        })
+                    }
                 </dl>
             </div>
         );

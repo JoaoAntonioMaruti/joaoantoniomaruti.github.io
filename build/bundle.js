@@ -21914,7 +21914,22 @@
 	    function Header(props) {
 	        _classCallCheck(this, Header);
 
-	        return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+	        var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this, props));
+
+	        _this.menu = [{
+	            name: 'Me',
+	            link: '#'
+	        }, {
+	            name: 'About',
+	            link: '#'
+	        }, {
+	            name: 'Projects',
+	            link: '#'
+	        }, {
+	            name: 'Contact',
+	            link: '#'
+	        }];
+	        return _this;
 	    }
 
 	    _createClass(Header, [{
@@ -21926,42 +21941,17 @@
 	                _react2.default.createElement(
 	                    'ul',
 	                    null,
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: '#' },
-	                            'Me'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: '#' },
-	                            'Projects'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: '#' },
-	                            'About'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'li',
-	                        null,
-	                        _react2.default.createElement(
-	                            'a',
-	                            { href: '#' },
-	                            'Contact'
-	                        )
-	                    )
+	                    this.menu.map(function (item, index) {
+	                        return _react2.default.createElement(
+	                            'li',
+	                            { key: index },
+	                            _react2.default.createElement(
+	                                'a',
+	                                { href: item.link },
+	                                item.name
+	                            )
+	                        );
+	                    })
 	                )
 	            );
 	        }

@@ -6,6 +6,15 @@ export class Header extends React.Component {
         this.menu = [{
             name:'Me',
             link:'#'
+        }, {
+            name:'About',
+            link:'#'
+        }, {
+            name:'Projects',
+            link:'#'
+        }, {
+            name:'Contact',
+            link:'#'
         }];
     }
 
@@ -13,18 +22,15 @@ export class Header extends React.Component {
         return (
             <div  className={`app-header ${this.props.scroll > 150 ? 'app-header-active' : ''}`}>
                 <ul>
-                    <li>
-                        <a href="#">Me</a>
-                    </li>
-                    <li>
-                        <a href="#">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                    {
+                        this.menu.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <a href={item.link}>{item.name}</a>
+                                </li>
+                            );
+                        })
+                    }
                 </ul>
             </div>
         );
