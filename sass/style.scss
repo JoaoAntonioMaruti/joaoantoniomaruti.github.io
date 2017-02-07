@@ -64,7 +64,7 @@ body{
 .parallax__cover{
   background: #2D112B;
   position: absolute;
-  height:2000px;
+  height:500px;
   top: 100%;
   z-index: 2;
   width: 100%;
@@ -81,6 +81,7 @@ body{
   padding:20px;
   top:100%;
   background:#fff;
+  height:100%;
 }
 
 $parallax__layers: 6;
@@ -97,10 +98,11 @@ h1{
 }
 
 .app-header{
-  position:fixed;
+  position:absolute;
   width:100%;
-  padding:0 10px;
   z-index:99;
+  margin-top:-80px;
+  margin-left:-20px;
   transition: all 0.2s ease-in-out;
   ul{
     display: flex;
@@ -110,15 +112,17 @@ h1{
       padding: 10px;
       font-family: 'Poiret One', cursive;
       border-bottom:solid 1px transparent;
+      flex-grow: 1;
+      text-align:center;
       a{
-        color:#2D112B;
+        color:#fff;
         font-size:22px;
         text-decoration: none;
         text-transform: uppercase;
         transition: all .6s ease-in-out;
       }
       &:hover{
-        border-color:#2D112B;
+        border-color:#fff;
       }
     }
   }

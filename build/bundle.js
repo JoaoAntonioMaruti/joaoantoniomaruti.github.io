@@ -21864,7 +21864,6 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { onScroll: this.handleScroll },
-	        _react2.default.createElement(_Header.Header, { scroll: this.state.scroll }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'about' },
@@ -22053,6 +22052,8 @@
 
 	var _Logo = __webpack_require__(207);
 
+	var _Header = __webpack_require__(185);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22090,17 +22091,17 @@
 	                'div',
 	                { className: 'content', style: this.props.styles },
 	                _react2.default.createElement(_Logo.Logo, null),
+	                _react2.default.createElement(_Header.Header, null),
 	                _react2.default.createElement(
 	                    'h1',
 	                    null,
-	                    'Hello'
+	                    'Jo\xE3o Antonio Maruti Milagres'
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis odio vitae velit consectetur tempor. Proin ornare dapibus tincidunt. Aliquam non ullamcorper libero. Vivamus tristique pellentesque arcu, eu aliquam ex. Nam velit odio, dictum id laoreet id, condimentum ac nibh. Integer pretium feugiat turpis, vel placerat arcu ultricies ac. Donec ac elit in mauris fermentum convallis. Maecenas magna eros, maximus ac rutrum eu, rhoncus sit amet dolor. Nunc tristique mollis imperdiet. In vel neque sed augue efficitur accumsan non sed metus. Sed ut arcu vitae odio pellentesque varius placerat vulputate lacus. Ut gravida non purus nec condimentum. Mauris tincidunt nunc ut nunc pulvinar tempus. Aliquam ac euismod lacus. Duis placerat nibh vitae odio congue, ac dignissim sapien faucibus. Sed metus mauris, fringilla vel diam et, interdum mollis elit.'
-	                ),
-	                _react2.default.createElement(_Projects.Projects, { projects: this.projects })
+	                    'Graduated in Systems Analysis at Unipar University, Brazilian, 22 years old, passionate about technology and innovation'
+	                )
 	            );
 	        }
 	    }]);
