@@ -64,7 +64,7 @@ body{
 .parallax__cover{
   background: #2D112B;
   position: absolute;
-  height:1000px;
+  height:2000px;
   top: 100%;
   z-index: 2;
   width: 100%;
@@ -99,7 +99,7 @@ h1{
 .app-header{
   position:fixed;
   width:100%;
-  padding:10px;
+  padding:0 10px;
   z-index:99;
   transition: all 0.2s ease-in-out;
   ul{
@@ -109,25 +109,30 @@ h1{
     li{
       padding: 10px;
       font-family: 'Poiret One', cursive;
+      border-bottom:solid 1px transparent;
       a{
         color:#2D112B;
         font-size:22px;
         text-decoration: none;
         text-transform: uppercase;
-        transition: all .8s ease-in-out;
+        transition: all .6s ease-in-out;
       }
       &:hover{
-        border-bottom:solid 2px;
+        border-color:#2D112B;
       }
     }
   }
 }
 
 .app-header-active{
+  background:#000;
   ul{
     li{
       a{
         color:#fff;
+      }
+      &:hover{
+        border-color:#fff;
       }
     }
   }
@@ -144,6 +149,12 @@ h1{
   text-align:center;
   color:#fff;
   margin-top:-200px;
+}
+
+.project{
+  img{
+    width:100%;
+  }
 }
 
 ul{

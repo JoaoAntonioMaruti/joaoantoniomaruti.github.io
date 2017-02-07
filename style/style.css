@@ -55,7 +55,7 @@ body {
 .parallax__cover {
   background: #2D112B;
   position: absolute;
-  height: 1000px;
+  height: 2000px;
   top: 100%;
   z-index: 2;
   width: 100%;
@@ -98,7 +98,7 @@ h1 {
 .app-header {
   position: fixed;
   width: 100%;
-  padding: 10px;
+  padding: 0 10px;
   z-index: 99;
   transition: all 0.2s ease-in-out; }
   .app-header ul {
@@ -107,18 +107,23 @@ h1 {
     border-bottom: solid 2px transparent; }
     .app-header ul li {
       padding: 10px;
-      font-family: 'Poiret One', cursive; }
+      font-family: 'Poiret One', cursive;
+      border-bottom: solid 1px transparent; }
       .app-header ul li a {
         color: #2D112B;
         font-size: 22px;
         text-decoration: none;
         text-transform: uppercase;
-        transition: all .8s ease-in-out; }
+        transition: all .6s ease-in-out; }
       .app-header ul li:hover {
-        border-bottom: solid 2px; }
+        border-color: #2D112B; }
 
-.app-header-active ul li a {
-  color: #fff; }
+.app-header-active {
+  background: #000; }
+  .app-header-active ul li a {
+    color: #fff; }
+  .app-header-active ul li:hover {
+    border-color: #fff; }
 
 .logo {
   position: absolute;
@@ -131,6 +136,9 @@ h1 {
   text-align: center;
   color: #fff;
   margin-top: -200px; }
+
+.project img {
+  width: 100%; }
 
 ul {
   margin: 0;
