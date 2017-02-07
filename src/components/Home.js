@@ -24,7 +24,7 @@ export class Home extends React.Component {
                   Front-end enginer
                 </span>
               </div>
-              <Parallax />
+              <Parallax filter={ this.state.scroll }/>
             </div>
         );
     }

@@ -17,14 +17,18 @@ export class Parallax extends React.Component {
     }
     
     render(){
+        let grayFilter = {
+            '-webkit-filter': `grayscale(${this.props.filter / 2}%)`,
+            filter: `grayscale(${this.props.filter / 2}%)`
+        }
         return (
             <div>
-              <div className={'parallax'}>
+              <div className={`parallax ${this.props.filter > 150 ? 'night-parallax' : ''}`}>
                 {
                     this.state.layers.map((layer, index) => {
                         return (
                             <div key={ index } className={`parallax__layer parallax__layer__${index}`}>
-                              <img src={ layer } />
+                              <img src={ layer } className={ this.props.filter > 150 ? 'night' : ''}/>
                             </div>
                         );
                     })
