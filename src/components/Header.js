@@ -7,14 +7,17 @@ export class Header extends React.Component {
             name:'Me',
             link:'#'
         }, {
-            name:'About',
-            link:'#'
+            name:'Skills',
+            link:'#/skills'
         }, {
             name:'Projects',
-            link:'#'
+            link:'#/Projects'
         }, {
             name:'Contact',
-            link:'#'
+            link:'#/contact'
+        }, {
+            name:'Blog',
+            link:'/blog'
         }];
     }
 

@@ -21919,14 +21919,17 @@
 	            name: 'Me',
 	            link: '#'
 	        }, {
-	            name: 'About',
-	            link: '#'
+	            name: 'Skills',
+	            link: '#/skills'
 	        }, {
 	            name: 'Projects',
 	            link: '#'
 	        }, {
 	            name: 'Contact',
-	            link: '#'
+	            link: '#/contact'
+	        }, {
+	            name: 'Blog',
+	            link: '/blog'
 	        }];
 	        return _this;
 	    }
@@ -22098,9 +22101,13 @@
 	                    'Jo\xE3o Antonio Maruti Milagres'
 	                ),
 	                _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Graduated in Systems Analysis at Unipar University, Brazilian, 22 years old, passionate about technology and innovation'
+	                    'div',
+	                    { className: 'content-text' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'Graduated in Systems Analysis at Unipar University, Brazilian, 22 years old, passionate about technology and innovation'
+	                    )
 	                )
 	            );
 	        }

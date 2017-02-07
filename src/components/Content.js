@@ -28,12 +28,11 @@ export class Content extends React.Component {
                 <Logo />
                 <Header />
                 <h1>João Antonio Maruti Milagres</h1>
-                <p>
-                    Graduated in Systems Analysis at Unipar University, Brazilian, 22 years old, passionate about technology and innovation
-                </p>
-                {
-                    // <Projects projects={ this.projects } />
-                }
+                <div className={'content-text'}>
+                    <p>
+                        Graduated in Systems Analysis at Unipar University, Brazilian, 22 years old, passionate about technology and innovation
+                    </p>
+                </div>
             </div>
         );
     }

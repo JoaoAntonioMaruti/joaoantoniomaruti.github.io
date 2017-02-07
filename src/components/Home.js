@@ -18,10 +18,6 @@ export class Home extends React.Component {
     render(){
         return (
             <div onScroll={this.handleScroll}>
-              {
-                // <Header scroll={ this.state.scroll } />
-              }
-                
               <div className={'about'}>Hello, I'm João 
                 <span className={'small'}>
                   Front-end enginer

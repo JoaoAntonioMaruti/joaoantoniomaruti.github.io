@@ -1,14 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
+// Variables
+$black:#191919;
+$white:#ffffff;
+$heaven:#FEDCC8;
 
 *{
   box-sizing: border-box;
 }
 
+::-moz-selection { 
+  background: $black; 
+  color:$white;
+}
+::selection { 
+  background: $black;
+  color:$white;
+}
+
 html,
 body{
   margin:0;
-  background-color: #FEDCC8;
+  background-color:$heaven;
   font-family: 'Open Sans Condensed', sans-serif;
   overflow-y:hidden;
 }
@@ -28,13 +41,9 @@ body{
 }
 
 .parallax::-webkit-scrollbar-track{
--webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: red;
 	display:none;
 }
 .parallax::-webkit-scrollbar{
-  width: 12px;
   display:none;
 }
 
@@ -82,6 +91,19 @@ body{
   top:100%;
   background:#fff;
   height:100%;
+  .content-text{
+    margin-top:20px;
+    &:before{
+        position: absolute;
+        content: '';
+        width: 75px;
+        height: 1px;
+        margin-top: -10px;
+        background:#191919;
+        left: 50%;
+        margin-left: -37px;
+    }
+  }
 }
 
 $parallax__layers: 6;
@@ -109,6 +131,7 @@ h1{
     list-style: none;
     border-bottom:solid 2px transparent;
     li{
+      cursor:pointer;
       padding: 10px;
       font-family: 'Poiret One', cursive;
       border-bottom:solid 1px transparent;
