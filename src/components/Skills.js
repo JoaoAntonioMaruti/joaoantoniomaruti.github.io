@@ -3,6 +3,12 @@ import React from 'react';
 export class Skills extends React.Component {
     constructor(props){
         super(props);
+        this.skills = [
+            {
+                value:5,
+                name:'Stylus'
+            }
+        ];
     }
     render(){
         return (

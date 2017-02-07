@@ -17,10 +17,10 @@ export class Parallax extends React.Component {
     }
     
     render(){
-        let grayFilter = {
-            '-webkit-filter': `grayscale(${this.props.filter / 2}%)`,
-            filter: `grayscale(${this.props.filter / 2}%)`
-        }
+        let contentTop = {
+            'marginTop': (-this.props.filter)
+        };
+        
         return (
             <div>
               <div className={`parallax ${this.props.filter > 150 ? 'night-parallax' : ''}`}>
@@ -34,10 +34,13 @@ export class Parallax extends React.Component {
                     })
                 }
                 <div className={'parallax__cover'}>
-                    <Skills />
-                    <div className={'center-div'}>
-                    </div>
                 </div>
+              </div>
+              <div className={`content`} style={ contentTop }>
+                <h1>Hello</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis odio vitae velit consectetur tempor. Proin ornare dapibus tincidunt. Aliquam non ullamcorper libero. Vivamus tristique pellentesque arcu, eu aliquam ex. Nam velit odio, dictum id laoreet id, condimentum ac nibh. Integer pretium feugiat turpis, vel placerat arcu ultricies ac. Donec ac elit in mauris fermentum convallis. Maecenas magna eros, maximus ac rutrum eu, rhoncus sit amet dolor. Nunc tristique mollis imperdiet. In vel neque sed augue efficitur accumsan non sed metus. Sed ut arcu vitae odio pellentesque varius placerat vulputate lacus. Ut gravida non purus nec condimentum. Mauris tincidunt nunc ut nunc pulvinar tempus. Aliquam ac euismod lacus. Duis placerat nibh vitae odio congue, ac dignissim sapien faucibus. Sed metus mauris, fringilla vel diam et, interdum mollis elit.
+                </p>
               </div>
             </div>
         );

@@ -10,11 +10,11 @@ export class Home extends React.Component {
         };
         this.handleScroll = this.handleScroll.bind(this);
     }
-    
+
     handleScroll (event) {
-      this.setState({scroll : event.target.scrollTop});
+      this.setState({ scroll : event.target.scrollTop });
     }
-    
+
     render(){
         return (
             <div onScroll={this.handleScroll}>
