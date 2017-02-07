@@ -21977,7 +21977,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Skills = __webpack_require__(187);
+	var _Logo = __webpack_require__(187);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22005,11 +22005,6 @@
 	        value: function render() {
 	            var _this2 = this;
 
-	            var grayFilter = {
-	                '-webkit-filter': 'grayscale(' + this.props.filter / 2 + '%)',
-	                filter: 'grayscale(' + this.props.filter / 2 + '%)'
-	            };
-
 	            var contentTop = {
 	                'marginTop': -(this.props.filter / 2)
 	            };
@@ -22027,19 +22022,12 @@
 	                            _react2.default.createElement('img', { src: layer, className: _this2.props.filter > 150 ? 'night' : '' })
 	                        );
 	                    }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'parallax__cover ' + (this.props.filter > 150 ? 'parallax__cover__night' : '') },
-	                        _react2.default.createElement(
-	                            'h1',
-	                            null,
-	                            'Skills'
-	                        )
-	                    )
+	                    _react2.default.createElement('div', { className: 'parallax__cover ' + (this.props.filter > 150 ? 'parallax__cover__night' : '') })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'content', style: contentTop },
+	                    _react2.default.createElement(_Logo.Logo, null),
 	                    _react2.default.createElement(
 	                        'h1',
 	                        null,
@@ -22067,7 +22055,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.Skills = undefined;
+	exports.Logo = undefined;
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -22083,126 +22071,31 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Skills = exports.Skills = function (_React$Component) {
-	    _inherits(Skills, _React$Component);
+	var Logo = exports.Logo = function (_React$Component) {
+	    _inherits(Logo, _React$Component);
 
-	    function Skills(props) {
-	        _classCallCheck(this, Skills);
+	    function Logo() {
+	        _classCallCheck(this, Logo);
 
-	        var _this = _possibleConstructorReturn(this, (Skills.__proto__ || Object.getPrototypeOf(Skills)).call(this, props));
-
-	        _this.skills = [{
-	            value: 5,
-	            name: 'Stylus'
-	        }];
-	        return _this;
+	        return _possibleConstructorReturn(this, (Logo.__proto__ || Object.getPrototypeOf(Logo)).apply(this, arguments));
 	    }
 
-	    _createClass(Skills, [{
+	    _createClass(Logo, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'skills-diagram' },
+	                { className: 'logo' },
 	                _react2.default.createElement(
-	                    'dl',
-	                    null,
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-5' },
-	                        'Stylus'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '5'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-10' },
-	                        'JavaScript'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '10'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-6' },
-	                        'TDD'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '3'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-8' },
-	                        'SCSS'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '8'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-4' },
-	                        'Regex'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '4'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-8' },
-	                        'Ionic'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '6'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-5' },
-	                        'UI/UX'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '5'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-9' },
-	                        'AngularJS'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '9'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dt',
-	                        { className: 'skill-7' },
-	                        'React'
-	                    ),
-	                    _react2.default.createElement(
-	                        'dd',
-	                        null,
-	                        '7'
-	                    )
+	                    'div',
+	                    { className: 'key' },
+	                    'J'
 	                )
 	            );
 	        }
 	    }]);
 
-	    return Skills;
+	    return Logo;
 	}(_react2.default.Component);
 
 /***/ },
