@@ -1,0 +1,88 @@
+.projects{
+    margin:15px;
+    &__title{
+        font-size:32px;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    .bg, .overlay {
+        text-align: center;
+    }
+    img,.overlay {
+        transition: .3s all;
+    }
+    &__container{
+        display:flex;
+        margin-top:20px;
+        &:before{
+            position: absolute;
+            content: ' ';
+            width: 50px;
+            height: 1px;
+            background: #000;
+            left: 50%;
+            margin-left: -25px;
+            margin-top: -5px;
+        }
+    }
+    .bg {
+        width:80%;
+        margin:0 10px;
+        position:relative;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            margin-bottom: -4px;
+            border-radius: 3px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left:0;
+            bottom: 0;
+            width: 100%;
+            color: $white;
+            opacity: 0;
+            z-index:2;
+            //text-shadow: 0px 4px 18px $white;
+            h2 {  margin-top: 20%;  }
+        }
+        &:before{
+            position:absolute;
+            width:101%;
+            height:101%;
+            margin:-.5%;
+            content:' ';
+            opacity:0;
+            transition: .3s all;
+            background:$image-overlay;
+            z-index:1;
+        }
+        
+        &:hover {
+            .overlay {  opacity: 1;  }
+            img {
+                -webkit-filter:blur(4px);
+                filter: blur(4px);
+                -moz-transform: scale(1.4);
+                -webkit-transform: scale(1.4);
+                transform: scale(1.4);
+            }
+            &:before{ opacity:1; }
+        }
+    }
+    // Responsivo
+    @media screen and (max-width: 1148px) {
+        .bg {
+            max-width: 48%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        &__container{ display:inherit; }
+       .bg {
+           float: none;
+           max-width: 80%;
+           margin: .5% auto;
+       }
+    }
+}

@@ -1,0 +1,24 @@
+.about{
+    margin:15px;
+    color:#000;
+    &__name{
+        font-size:32px;
+        margin:15px 0;
+        text-align:center;
+    }
+    &__description{
+        margin:0 30%;
+        margin-top:15px;
+        text-align:center;
+        &:before{
+            position:absolute;
+            content:' ';
+            width:50px;
+            height:1px;
+            background:#000;
+            left:50%;
+            margin-left:-25px;
+            margin-top:-5px;
+        }
+    }
+}

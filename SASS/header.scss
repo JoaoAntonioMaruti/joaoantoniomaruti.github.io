@@ -1,0 +1,14 @@
+@import 'variables.scss';
+
+.header-app{
+    position:fixed;
+    height:40px;
+    width:100%;
+    z-index:9;
+    background:transparent;
+    transition: all .4s ease-in-out;
+}
+
+.show-header{
+    background:$black;
+}
