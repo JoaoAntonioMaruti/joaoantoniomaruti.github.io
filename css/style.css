@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+textarea {
+  resize: none; }
+
 .home {
   position: relative;
   width: 100hv;
@@ -191,6 +194,46 @@ nav {
   .button:hover {
     background: #270f26;
     color: #fff; }
+
+.contact-form {
+  margin: 10px; }
+  .contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 3px;
+    border: 0;
+    padding: 8px 10px;
+    background: #381236;
+    outline: none;
+    border: 1px solid transparent;
+    color: #fff;
+    transition: all .2s ease-in-out; }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border: 1px solid #fff; }
+
+.button-contact {
+  float: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #270f26;
+  border: 1px #fff solid;
+  color: #fff;
+  outline: none; }
+  .button-contact:hover, .button-contact:active {
+    background: #fff;
+    color: #270f26; }
+
+::-webkit-input-placeholder {
+  color: #fff; }
+
+::-moz-placeholder {
+  color: #fff; }
+
+:-ms-input-placeholder {
+  color: #fff; }
+
+:-moz-placeholder {
+  color: #fff; }
 
 .menu-container .bars {
   width: 120px;

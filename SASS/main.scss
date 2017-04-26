@@ -9,6 +9,8 @@ body{
     -moz-osx-font-smoothing: grayscale;
 }
 
+textarea{resize: none;}
+
 .home{
     position:relative;
     width:100hv;
@@ -208,4 +210,50 @@ nav{
     background:$p;
     color:$white;
   }
+}
+
+.contact-form{
+  margin:10px;
+  input, textarea{
+    margin:10px 0;
+    width:100%;
+    border-radius:3px;
+    border:0;
+    padding:8px 10px;
+    background:#381236;
+    outline:none;
+    border: 1px solid transparent;
+    color:$white;
+    transition: all .2s ease-in-out;
+    &:focus{
+      border: 1px solid #fff;
+    }
+  }
+}
+
+.button-contact{
+  float:right;
+  margin-top:0;
+  margin-bottom:0;
+  background:$p;
+  border:1px $white solid;
+  color:$white;
+  outline:none;
+  &:hover, &:active{
+    background:$white;
+    color:$p;
+  }
+}
+
+::-webkit-input-placeholder {
+  color:$white;
+}
+::-moz-placeholder {
+  color:$white;
+}
+:-ms-input-placeholder {
+  color:$white;
+}
+:-moz-placeholder {
+  color:$white;
 }
