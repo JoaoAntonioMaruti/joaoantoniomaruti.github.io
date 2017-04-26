@@ -35,7 +35,7 @@
             margin-bottom: -4px;
             border-radius: 3px;
         }
-        .overlay {
+        .overlay{
             position: absolute;
             top: 0;
             left:0;
@@ -44,7 +44,7 @@
             color: $white;
             opacity: 0;
             z-index:2;
-            //text-shadow: 0px 4px 18px $white;
+            box-shadow:0px 8px 38px rgba(80, 80, 80, 0.4);
             h2 {  margin-top: 20%;  }
         }
         &:before{
