@@ -44,19 +44,34 @@ textarea {
   .skills .skill {
     margin: 10px;
     padding: 5px;
-    border: solid 1px #270f26;
+    border: solid 1px #47ddbc;
     transition: all .2s ease-in-out;
     cursor: default;
-    color: #270f26; }
+    color: #47ddbc; }
     .skills .skill:hover {
       color: #fff;
-      background: #270f26; }
+      background: #47ddbc; }
 
 @media (max-width: 600px) {
   .skills {
     display: inherit; }
     .skills .skill {
       text-align: center; } }
+
+.top-button {
+  position: absolute;
+  bottom: 0px;
+  margin: 5px;
+  color: #381236;
+  font-size: 56px;
+  outline: none;
+  border: 0;
+  padding: 0 15px;
+  right: 10px;
+  background: transparent;
+  transition: all .2s ease-in-out; }
+  .top-button:hover {
+    color: #fff; }
 
 #header {
   position: relative;
@@ -70,7 +85,7 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(".././assets/bg.png") center;
+    background: url(".././assets/bg.gif") center;
     background-size: cover; }
   #header .title {
     position: absolute;
@@ -117,11 +132,12 @@ nav {
   text-align: center; }
 
 .footer__contact {
-  background: #270f26;
+  background: #47ddbc;
   width: 100%;
   position: absolute; }
 
 .footer__email {
+  margin-top: 15px;
   text-align: center; }
   .footer__email a {
     color: #fff;
@@ -210,13 +226,13 @@ nav {
 .button {
   padding: 12px 25px;
   margin: 20px;
-  border: solid 1px #270f26;
+  border: solid 1px #47ddbc;
   cursor: pointer;
   transition: all .2s ease-in-out;
-  color: #270f26;
+  color: #47ddbc;
   text-decoration: none; }
   .button:hover {
-    background: #270f26;
+    background: #47ddbc;
     color: #fff; }
 
 .container input, .container textarea {
@@ -225,7 +241,7 @@ nav {
   border-radius: 3px;
   border: 0;
   padding: 8px 10px;
-  background: #381236;
+  background: #fff;
   outline: none;
   border: 1px solid transparent;
   color: #fff;
@@ -237,13 +253,19 @@ nav {
   float: right;
   margin-top: 0;
   margin-bottom: 0;
-  background: #270f26;
+  background: #47ddbc;
   border: 1px #fff solid;
   color: #fff;
   outline: none; }
   .button-contact:hover, .button-contact:active {
     background: #fff;
-    color: #270f26; }
+    color: #47ddbc; }
+
+.shadow-effect {
+  position: relative;
+  z-index: 99;
+  margin: 0;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
 ::-webkit-input-placeholder {
   color: #fff; }
@@ -384,7 +406,7 @@ nav {
       content: ' ';
       opacity: 0;
       transition: .3s all;
-      background: rgba(39, 15, 38, 0.8);
+      background: rgba(71, 221, 188, 0.7);
       z-index: 1; }
     .projects .bg:hover .overlay {
       opacity: 1; }

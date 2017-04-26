@@ -70,6 +70,23 @@ textarea{resize: none;}
   }
 }
 
+.top-button{
+  position:absolute;
+  bottom:0px;
+  margin:5px;
+  color:#381236;
+  font-size:56px;
+  outline:none;
+  border:0;
+  padding:0 15px;
+  right:10px;
+  background:transparent;
+  transition: all .2s ease-in-out;
+  &:hover{
+    color:$white;
+  }
+}
+
 #header {
   position: relative;
   width: 100%;
@@ -79,7 +96,7 @@ textarea{resize: none;}
   .header-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: url('.././assets/bg.png') center;
+    background: url('.././assets/bg.gif') center;
     background-size: cover;
   }
   .title {
@@ -137,6 +154,7 @@ nav{
     position:absolute;
   }
   &__email{
+    margin-top:15px;
     text-align:center;
     a{
       color:$white;
@@ -249,7 +267,7 @@ nav{
     border-radius:3px;
     border:0;
     padding:8px 10px;
-    background:#381236;
+    background:$white;
     outline:none;
     border: 1px solid transparent;
     color:$white;
@@ -272,6 +290,13 @@ nav{
     background:$white;
     color:$p;
   }
+}
+
+.shadow-effect{
+  position:relative;
+  z-index:99;
+  margin:0;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 ::-webkit-input-placeholder {
