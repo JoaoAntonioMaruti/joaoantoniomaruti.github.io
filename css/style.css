@@ -34,6 +34,30 @@ textarea {
       -webkit-filter: grayscale(0%);
       filter: grayscale(0%); }
 
+.skills {
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+  .skills .skill {
+    margin: 10px;
+    padding: 5px;
+    border: solid 1px #270f26;
+    transition: all .2s ease-in-out;
+    cursor: default;
+    color: #270f26; }
+    .skills .skill:hover {
+      color: #fff;
+      background: #270f26; }
+
+@media (max-width: 600px) {
+  .skills {
+    display: inherit; }
+    .skills .skill {
+      text-align: center; } }
+
 #header {
   position: relative;
   width: 100%;
@@ -195,21 +219,19 @@ nav {
     background: #270f26;
     color: #fff; }
 
-.contact-form {
-  margin: 10px; }
-  .contact-form input, .contact-form textarea {
-    margin: 10px 0;
-    width: 100%;
-    border-radius: 3px;
-    border: 0;
-    padding: 8px 10px;
-    background: #381236;
-    outline: none;
-    border: 1px solid transparent;
-    color: #fff;
-    transition: all .2s ease-in-out; }
-    .contact-form input:focus, .contact-form textarea:focus {
-      border: 1px solid #fff; }
+.container input, .container textarea {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 3px;
+  border: 0;
+  padding: 8px 10px;
+  background: #381236;
+  outline: none;
+  border: 1px solid transparent;
+  color: #fff;
+  transition: all .2s ease-in-out; }
+  .container input:focus, .container textarea:focus {
+    border: 1px solid #fff; }
 
 .button-contact {
   float: right;

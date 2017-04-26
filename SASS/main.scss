@@ -39,6 +39,36 @@ textarea{resize: none;}
     }
 }
 
+.skills{
+  display:flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  .skill{
+    margin:10px;
+    padding:5px;
+    border:solid 1px $p;
+    transition: all .2s ease-in-out;
+    cursor:default;
+    color:$p;
+    &:hover{
+      color:$white;
+      background:$p;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .skills{
+    display:inherit;
+    .skill{
+      text-align:center;
+    }
+  }
+}
 
 #header {
   position: relative;
@@ -212,8 +242,7 @@ nav{
   }
 }
 
-.contact-form{
-  margin:10px;
+.container{
   input, textarea{
     margin:10px 0;
     width:100%;
