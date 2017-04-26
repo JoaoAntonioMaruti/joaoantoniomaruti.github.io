@@ -76,16 +76,21 @@ textarea{resize: none;}
   position:absolute;
   bottom:0px;
   margin:5px;
-  color:#381236;
-  font-size:56px;
+  color:$white;
   outline:none;
-  border:0;
-  padding:0 15px;
   right:10px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
   background:transparent;
-  transition: all .2s ease-in-out;
+  margin:10px;
+  border:0;
+  // border:1px $white solid;
+  transition: all .4s ease;
   &:hover{
-    color:$white;
+    box-shadow:0px 8px 38px rgba(80, 80, 80, 0.4);
+    background:$white;
+    color:$p;
   }
 }
 
@@ -93,8 +98,8 @@ textarea{resize: none;}
   position: relative;
   width: 100%;
   height: 100vh;
-  background: black;
-  overflow: hidden; // THIS IS * IMPORTANT * DON'T FORGET ! ! !
+  background:black;
+  overflow: hidden;
   .header-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -139,6 +144,8 @@ nav{
     margin-left: -50px;
     text-align: center;
     color: #fff;
+    background:$p2;
+    box-shadow:0px 8px 38px rgba(80, 80, 80, 0.4);
     bottom:60px;
   }
 }
@@ -306,5 +313,5 @@ nav{
   position:relative;
   z-index:99;
   margin:0;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow:0 19px 38px rgba(80,80,80,0.30), 0 15px 12px rgba(80,80,80,0.22);
 }

@@ -65,16 +65,20 @@ textarea {
   position: absolute;
   bottom: 0px;
   margin: 5px;
-  color: #381236;
-  font-size: 56px;
+  color: #fff;
   outline: none;
-  border: 0;
-  padding: 0 15px;
   right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background: transparent;
-  transition: all .2s ease-in-out; }
+  margin: 10px;
+  border: 0;
+  transition: all .4s ease; }
   .top-button:hover {
-    color: #fff; }
+    box-shadow: 0px 8px 38px rgba(80, 80, 80, 0.4);
+    background: #fff;
+    color: #47ddbc; }
 
 #header {
   position: relative;
@@ -127,6 +131,8 @@ nav {
     margin-left: -50px;
     text-align: center;
     color: #fff;
+    background: rgba(71, 221, 188, 0.2);
+    box-shadow: 0px 8px 38px rgba(80, 80, 80, 0.4);
     bottom: 60px; }
 
 #octocat {
@@ -275,7 +281,7 @@ nav {
   position: relative;
   z-index: 99;
   margin: 0;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  box-shadow: 0 19px 38px rgba(80, 80, 80, 0.3), 0 15px 12px rgba(80, 80, 80, 0.22); }
 
 .menu-container .bars {
   width: 120px;
