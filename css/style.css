@@ -103,7 +103,7 @@ textarea {
     display: inherit;
     border-bottom: 0; }
     .skills .skill {
-      text-align: left;
+      text-align: right;
       box-shadow: none;
       margin-top: 0 !important;
       height: auto !important; }
@@ -205,7 +205,9 @@ nav {
 #octocat {
   width: 150px;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 99;
+  background: blue; }
 
 .contact-title {
   font-size: 42px;
@@ -349,6 +351,10 @@ nav {
   z-index: 99;
   margin: 0;
   box-shadow: 0 19px 38px rgba(80, 80, 80, 0.3), 0 15px 12px rgba(80, 80, 80, 0.22); }
+
+@media (min-width: 991px) {
+  .container-form {
+    max-width: 800px; } }
 
 .menu-container .bars {
   width: 120px;
