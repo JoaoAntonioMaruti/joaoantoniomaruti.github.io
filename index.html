@@ -4,10 +4,12 @@
         <title>João Antonio Milagres</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="Utf-8"/>
-        <script type="text/javascript" src="./js/index.js"></script>
         <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css" type="text/css" />
+        <script href="./lib/jQuery/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript" src="./js/media.js"></script>
     </head>
     <body>
         <nav class="header-app">
@@ -17,7 +19,6 @@
                 <li>Projects</li>
             </ul>
         </nav>
-        <!--<img id="octocat" src="./assets/github.png" />-->
         <section class="home">
             <header id='header'>
                 <div class='header-bg'></div>
@@ -106,6 +107,37 @@
                 </div>
             </div>
         </section>
+        <section class="talks">
+            <div class="talks__title">
+                My Talks
+            </div>
+
+            <main>
+                <section>
+                    <div id="YouTube-player"></div>
+                    
+                    <div class="talk__info">
+                        <h3 class="talk__name">Acerte em suas decisões com Business Intelligence (BI)</h3>
+                        <span class="talk__lang">
+                            <b>Language:</b>
+                            pt-br
+                        </span>
+                        <br>
+                        You can find Talk slides
+                        <a href="https://www.slideshare.net/JooAntonioMarutiMila/acerte-em-suas-decises-com-business-intelligence-66142590" target="_blank">
+                            here
+                        </a>
+                    </div>
+
+                    <div>
+                        <span class="nowrap margin-left-m margin-right-m">
+                            <input id="YouTube-video-id" type="text" value="1p1NFUhVDQ8" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+                        </span>
+                    </div>
+
+                </section>
+            </main>
+        </section>
         <div class="contact-title shadow-effect">
             CONTACT
         </div>
@@ -161,9 +193,12 @@
                       <span>Facebook</span>
                   </a>
                 </div>
-                <button class="top-button">
+                <button class="top-button" id="back-top">
                     <i class="fa fa-caret-up"></i>
                 </button>
+                <a href="https://www.github.com/JoaoAntonioMaruti" target="_blank">
+                    <div id="octocat"></div>
+                </a>
             </footer>
         </secition>
     </body>

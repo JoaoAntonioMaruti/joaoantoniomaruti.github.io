@@ -1,5 +1,17 @@
 'use strict';
 
+
+// $(document).ready(function(){
+//     $(function () {
+//         $('#back-top').click(function () {
+//             $('body,html').animate({
+//                 scrollTop: 0
+//             }, 800);
+//             return false;
+//         });
+//     });
+// });
+
 document.addEventListener('scroll', function(event) {
     var x = event.target.body.scrollTop,
         transY = (x * 0.5),
