@@ -88,10 +88,10 @@ main > section textarea {
     &__name {
         text-align: center;
         font-size: 20px;
+        margin-top: 0;
     }
     &__info {
         width: 400px;
-        box-shadow: 0 19px 38px rgba(80, 80, 80, 0.3), 0 15px 12px rgba(80, 80, 80, 0.22);
         padding: 10px;
         background: $white;
         position: relative;

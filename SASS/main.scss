@@ -1,6 +1,15 @@
 @import 'variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
+::selection {
+  background: $p;
+  color: $white;
+}
+::-moz-selection {
+  background: $p;
+  color: $white;
+}
+
 body{
     font-family:'Open Sans Condensed', sans-serif;
     margin:0;
