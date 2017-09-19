@@ -1,10 +1,5 @@
 @import 'variables.scss';
 
-main {
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
 main > section { margin-bottom: 1em; }
 
 main > section div.framed > div {
@@ -58,6 +53,7 @@ main > section textarea {
     main > section iframe {
       height: 240px;
       width: 320px;
+      margin-left: -160px!important;
     }
 
     main > section input[type="range"] { width: 320px; }
@@ -65,16 +61,42 @@ main > section textarea {
 
 @media (max-width: 400px) {
     main > section iframe {
-      height: 200px;
-      width: 200px;
+      width: calc( 100% - 20px);
+      margin-left: 10px!important;
+      left:auto!important;
     }
+
+    .talk__info { padding: 10px 80px!important; }
 
     main > section input[type="range"] { width: 200px; }
 }
 
+@media (max-width: 767px) {
+    .timeline-row {
+        padding-top: 4.5rem;
+        .timeline-item {
+            margin-top: 30px;
+            position: absolute;
+            margin-top: -25px;
+            width: 50%;
+            margin-left: 20px;
+        }
+        .kb-connector{
+            &__line {
+                height: 11rem;
+            }
+        }
+    }
+    .kb-card{
+        width: calc( 100% - 40px );
+        margin: 0 20px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
 
 #YouTube-player {
-    box-shadow: 0 19px 38px rgba(80, 80, 80, 0.3), 0 15px 12px rgba(80, 80, 80, 0.22);
     position: relative;
     left: 50%;
     margin-left: -200px;
@@ -93,7 +115,7 @@ main > section textarea {
     &__info {
         width: 400px;
         padding: 10px;
-        background: $white;
+        text-align: center;
         position: relative;
         left: 50%;
         margin-left: -200px;
