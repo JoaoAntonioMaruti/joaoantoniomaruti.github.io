@@ -699,23 +699,23 @@ header .mountains .one, header .mountains .two, header .mountains .three, header
   background-size: 105%;
 }
 header .mountains .one {
-  background-image: url("http://geekstudios.co/freebies/mountains-1.svg");
+  background-image: url("./../assets/mountains-1.svg");
   z-index: 0;
 }
 header .mountains .two {
-  background-image: url("http://geekstudios.co/freebies/mountains-2.svg");
+  background-image: url("./../assets/mountains-2.svg");
   z-index: -1;
 }
 header .mountains .three {
-  background-image: url("http://geekstudios.co/freebies/mountains-3.svg");
+  background-image: url("./../assets/mountains-3.svg");
   z-index: -2;
 }
 header .mountains .four {
-  background-image: url("http://geekstudios.co/freebies/mountains-4.svg");
+  background-image: url("./../assets/mountains-4.svg");
   z-index: -3;
 }
 header .mountains .five {
-  background-image: url("http://geekstudios.co/freebies/mountains-5.svg");
+  background-image: url("./../assets/mountains-5.svg");
   z-index: -4;
 }
 
