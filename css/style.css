@@ -274,8 +274,8 @@ nav {
   left: 50%;
   margin-left: -50px;
   text-align: center;
-  color: #fff;
-  bottom: 60px;
+  color: #192a2e;
+  top: 60px;
 }
 .profile__logo:hover {
   background: #47ddbc;
