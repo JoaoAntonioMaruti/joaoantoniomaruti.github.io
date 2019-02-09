@@ -101,6 +101,17 @@ section {
 .skill-90  { margin-top: 20px!important; height:180px; }
 .skill-100 { margin-top: 0px !important; height:200px;}
 
+.errors {
+  font-weight: bold;
+  color: #ff0057;
+  position: absolute;
+}
+.success {
+  font-weight: bold;
+  color: #FFF;
+  position: absolute;
+}
+
 @media (max-width: 600px) {
   .skills{
     height:auto;

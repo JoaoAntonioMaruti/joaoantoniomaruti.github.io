@@ -9,7 +9,6 @@
     <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/media.js"></script>
   </head>
   <body>
@@ -41,8 +40,8 @@
         João Antonio Maruti Milagres
       </div>
       <div class="about__description">
-        Software engineer graduated in Systems Analysis at Unipar University, Specialization
-        with mobile applications at Alfa university
+        Software engineer graduated in Systems Analysis at Unipar University,
+        specialization with mobile applications at Alfa university,
         currently focused on building applications with
         JavaScript, NodeJS, React, react-native, TypeScript, GraphQL, Elixir
         and functional programming enthusiast
@@ -391,7 +390,7 @@
             Send me a "Hi"! Lest's talk.
           </a>
         </div>
-        <form class="container container-form" data-netlify="true">
+        <form class="container container-form">
           <div class="row">
             <div class="col-sm-6">
               <input type="text" placeholder="Name" id="name" name="name" />
@@ -410,15 +409,12 @@
               <textarea placeholder="Message" rows="4" name="message" id="message"></textarea>
             </div>
           </div>
+          <div class="errors" id="error""></div>
+          <div class="success" id="success"></div>
           <div class="row">
             <button class="button button-contact" id="send">Enviar</button>
           </div>
         </form>
-        <!-- <div class="footer__email">
-            <a href="mailto:joaoantoniomaruti@gmail.com">
-                joaoantoniomaruti@gmail.com
-            </a>
-        </div> -->
         <a href="https://web.whatsapp.com/send?phone=5544999542650&text=Hello" class="link">
           <div class="whatsapp">
             <div class="icon"></div>
@@ -436,5 +432,7 @@
         </a>
       </footer>
     </secition>
+
+    <script type="text/javascript" src="./js/index.js"></script>
   </body>
 </html>

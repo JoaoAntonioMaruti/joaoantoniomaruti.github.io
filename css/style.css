@@ -141,6 +141,18 @@ section {
   height: 200px;
 }
 
+.errors {
+  font-weight: bold;
+  color: #ff0057;
+  position: absolute;
+}
+
+.success {
+  font-weight: bold;
+  color: #FFF;
+  position: absolute;
+}
+
 @media (max-width: 600px) {
   .skills {
     height: auto;
