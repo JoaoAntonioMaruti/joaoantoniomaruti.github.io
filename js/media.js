@@ -59,9 +59,6 @@ function onYouTubeIframeAPIReady() {
         }
     }
 
-
-    console.log('Intanciou aqui');
-
     youTubePlayer = new YT.Player('YouTube-player', {
         videoId: '1p1NFUhVDQ8',
         height: height,
