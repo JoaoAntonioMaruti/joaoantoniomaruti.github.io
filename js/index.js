@@ -6,11 +6,11 @@ document.addEventListener('scroll', function() {
 	const four = document.querySelector('.four')
 	const five = document.querySelector('.five')
 
-	one.style.bottom = (-(top * 0.15) + 'px')
-	two.style.bottom = (-(top * 0.2) + 'px')
-	three.style.bottom = (-(top * 0.3) + 'px')
-	four.style.bottom = (-(top * 0.4) + 'px')
-	five.style.bottom = (-(top * 0.5) + 'px')
+	one.style.bottom = (-(top * (0.15 * 2)) + 'px')
+	two.style.bottom = (-(top * (0.2 * 2)) + 'px')
+	three.style.bottom = (-(top * (0.3 * 2)) + 'px')
+	four.style.bottom = (-(top * (0.4 * 2)) + 'px')
+	five.style.bottom = (-(top * (0.5 * 2)) + 'px')
 })
 
 
