@@ -13,3 +13,13 @@ $color:#969696;
 $bg : #74F3C5;
 $menu-color: white;
 $snappy : cubic-bezier(0.694,  0.048, 0.335, 1.000);
+
+// Colors
+$color-1: #2c3e50;
+$color-2: #3498db;
+$color-3: #2ecc71;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
