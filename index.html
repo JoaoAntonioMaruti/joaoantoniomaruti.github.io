@@ -9,7 +9,6 @@
     <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    <script href="./lib/jQuery/jquery.min.js"></script>
     <script type="text/javascript" src="./js/index.js"></script>
     <script type="text/javascript" src="./js/media.js"></script>
   </head>
@@ -392,29 +391,29 @@
             Send me a "Hi"! Lest's talk.
           </a>
         </div>
-        <div class="container container-form">
+        <form class="container container-form" data-netlify="true">
           <div class="row">
             <div class="col-sm-6">
-              <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Name" id="name" name="name" />
             </div>
             <div class="col-sm-6">
-              <input type="email" placeholder="E-mail" />
+              <input type="email" placeholder="E-mail" name="email" id="email" />
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <input type="text" placeholder="Subject" />
+              <input type="text" placeholder="Subject" name="subject" id="subject" />
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <textarea placeholder="Message" rows="4"></textarea>
+              <textarea placeholder="Message" rows="4" name="message" id="message"></textarea>
             </div>
           </div>
           <div class="row">
-            <button class="button button-contact">Enviar</button>
+            <button class="button button-contact" id="send">Enviar</button>
           </div>
-        </div>
+        </form>
         <!-- <div class="footer__email">
             <a href="mailto:joaoantoniomaruti@gmail.com">
                 joaoantoniomaruti@gmail.com
