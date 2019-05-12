@@ -1,0 +1,40 @@
+.tabs {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 16px;
+    &__item {
+      outline: none;
+      border: 0;
+      padding: 8px 32px;
+      background: blue;
+      text-transform: uppercase;
+      font-weight: bold;
+      width: 120px;
+      text-align: center;
+      // border: 1px solid #47ddbc;
+      background: #FFF;
+      color: #47ddbc;
+      &:nth-child(1) {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+      &:nth-child(2) {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+
+  .tab-active {
+    background: #47ddbc;
+    color: #FFF;
+  }
+
+  &__content {
+    #tab2-content {
+      display: none;
+    }
+  }
+}

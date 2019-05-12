@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "sass --watch ./SASS/style.scss ./css/style.css & http-server --p 3030",
     "sass": "sass --watch ./SASS/style.scss ./css/style.css"
   },
   "repository": {

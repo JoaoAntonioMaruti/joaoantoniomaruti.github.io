@@ -17,7 +17,7 @@
     img,.overlay {
         transition: .3s all;
     }
-    
+
     .project-title {
         background: #fff;
         text-align: center;
@@ -48,6 +48,9 @@
 
     .project{
         height: 300px;
+        &__codepen {
+          height: 600px;
+        }
         width: 100%;
         max-width: 100%;
         overflow: hidden;
@@ -68,11 +71,11 @@
             display:flex;
             align-items: center;
             justify-content: center;
-            h2 { 
+            h2 {
                 margin-top: -50px;
              }
         }
-        
+
         img {
             width: 100%;
             height: auto;
@@ -81,7 +84,7 @@
             top: 50%;
             transform: translateY(-50%);
 
-            &:before { 
+            &:before {
                 position: absolute;
                 content: '';
                 width: 100%;

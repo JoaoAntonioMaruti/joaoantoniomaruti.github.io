@@ -1,10 +1,67 @@
+var tab1 = document.getElementById('tab1')
+var tab2 = document.getElementById('tab2')
+
+var activeClassName = 'tab-active'
+var tabs = {
+  button: [
+    document.getElementById('tab1'),
+    document.getElementById('tab2'),
+  ],
+  content: [
+    document.getElementById('tab1-content'),
+    document.getElementById('tab2-content'),
+  ],
+}
+
+var getTabButton = function (tab) {
+  return tabs.button[tab - 1]
+}
+
+var getTabContent = function (tab) {
+  return tabs.content[tab - 1]
+}
+
+var showTab = function (tab) {
+  tabs.content.map(function (content, index) {
+    content.style.display = index + 1 === tab ? 'block' : 'none'
+    return
+  })
+}
+
+var removeTabsStyles = function () {
+  return tabs.button.map(function (tab) {
+    tab.classList.remove(activeClassName)
+  })
+}
+
+var tabsHandler = function (tab) {
+  showTab(tab)
+  removeTabsStyles()
+  var currentTab = getTabButton(tab)
+  var names = currentTab.className.split(' ')
+
+  if (names.some((className) => className === activeClassName)) {
+    currentTab.classList.remove(activeClassName)
+    return
+  }
+  currentTab.classList.add(activeClassName)
+  return
+}
+
+tab1.addEventListener('click', function() {
+  tabsHandler(1)
+})
+tab2.addEventListener('click', function() {
+  tabsHandler(2)
+})
+
 document.addEventListener('scroll', function() {
-	const top = window.pageYOffset
-	const one = document.querySelector('.one')
-	const two = document.querySelector('.two')
-	const three = document.querySelector('.three')
-	const four = document.querySelector('.four')
-	const five = document.querySelector('.five')
+	var top = window.pageYOffset
+	var one = document.querySelector('.one')
+	var two = document.querySelector('.two')
+	var three = document.querySelector('.three')
+	var four = document.querySelector('.four')
+	var five = document.querySelector('.five')
 
 	one.style.bottom = (-(top * (0.15 * 2)) + 'px')
 	two.style.bottom = (-(top * (0.2 * 2)) + 'px')
@@ -65,7 +122,7 @@ var initForm = function () {
     var subject = document.getElementById('subject').value
     var message = document.getElementById('message').value
 
-    const form = {
+    var form = {
       name: name,
       email: email,
       subject: subject,

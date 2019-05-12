@@ -731,6 +731,40 @@ header .mountains .five {
   z-index: -4;
 }
 
+.tabs__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+.tabs__header__item {
+  outline: none;
+  border: 0;
+  padding: 8px 32px;
+  background: blue;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 120px;
+  text-align: center;
+  background: #FFF;
+  color: #47ddbc;
+}
+.tabs__header__item:nth-child(1) {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.tabs__header__item:nth-child(2) {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.tabs .tab-active {
+  background: #47ddbc;
+  color: #FFF;
+}
+.tabs__content #tab2-content {
+  display: none;
+}
+
 .projects {
   background: #f5f5f5;
   padding: 40px;
@@ -785,6 +819,9 @@ header .mountains .five {
   max-width: 100%;
   overflow: hidden;
   background: #fff;
+}
+.projects .project__codepen {
+  height: 600px;
 }
 .projects .project .overlay {
   overflow: hidden;
