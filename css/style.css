@@ -818,10 +818,11 @@ header .mountains .five {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
-  background: #fff;
+  background: #FFF;
 }
 .projects .project__codepen {
   height: 600px;
+  background: #ccc;
 }
 .projects .project .overlay {
   overflow: hidden;

@@ -48,13 +48,14 @@
 
     .project{
         height: 300px;
-        &__codepen {
-          height: 600px;
-        }
         width: 100%;
         max-width: 100%;
         overflow: hidden;
-        background: #fff;
+        background: #FFF;
+        &__codepen {
+          height: 600px;
+          background: #ccc;
+        }
         .overlay {
             overflow: hidden;
             transition: .3s all;

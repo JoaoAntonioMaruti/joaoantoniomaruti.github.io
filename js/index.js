@@ -39,12 +39,15 @@ var tabsHandler = function (tab) {
   removeTabsStyles()
   var currentTab = getTabButton(tab)
   var names = currentTab.className.split(' ')
+  var tabContent = getTabContent(tab)
 
   if (names.some((className) => className === activeClassName)) {
     currentTab.classList.remove(activeClassName)
     return
   }
   currentTab.classList.add(activeClassName)
+  tabContent.classList.remove('animated', 'fadeIn', 'fast')
+  tabContent.classList.add('animated', 'fadeIn', 'fast')
   return
 }
 
