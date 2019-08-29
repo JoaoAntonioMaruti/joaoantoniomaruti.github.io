@@ -45,6 +45,7 @@ section {
   height: 100vh;
   background: url(".././assets/blur.jpg") no-repeat;
   background-size: cover;
+  padding-top: 2px;
 }
 .home__image {
   width: 150px;
