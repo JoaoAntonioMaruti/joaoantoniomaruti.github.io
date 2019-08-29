@@ -769,6 +769,15 @@ header .mountains .five {
   background: #f5f5f5;
   padding: 40px;
 }
+.projects .projects__notes {
+  display: flex;
+  justify-content: center;
+}
+.projects .projects__notes__note {
+  text-align: center;
+  margin-bottom: 16px;
+  max-width: 340px;
+}
 .projects a {
   text-decoration: none;
   color: #969696;
