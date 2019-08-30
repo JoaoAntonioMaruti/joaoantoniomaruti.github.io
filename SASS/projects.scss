@@ -18,7 +18,7 @@
         font-size:32px;
         text-align:center;
         text-transform:uppercase;
-        color: $p;
+        color: $primary;
         font-weight: bolder;
     }
     .bg, .overlay {
@@ -48,7 +48,7 @@
               margin-top: 35px;
               width: 40px;
               height: 2px;
-              background: $p;
+              background: $primary;
           }
         }
         .description {

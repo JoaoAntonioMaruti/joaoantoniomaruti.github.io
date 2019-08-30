@@ -29,10 +29,12 @@ textarea {
 
 .video_card {
   background-color: #f5f5f5;
-  margin: 20px;
+  margin: 20px 20px 40px;
   margin-top: 40px;
+  border-radius: 2px;
   position: inherit;
   z-index: 9;
+  box-shadow: 0px 8px 66px rgba(80, 80, 80, 0.2);
 }
 
 section {
