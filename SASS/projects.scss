@@ -1,3 +1,11 @@
+@import 'variables.scss';
+
+$iphone-width: 200px;
+$iphone-height: 200px;
+$ipad-width: 300px;
+$ipad-height: 200px;
+$sensor-width: 50px;
+
 .projects{
     background: #f5f5f5;
     padding: 40px;
@@ -87,24 +95,8 @@
              }
         }
 
-        img {
-            width: 100%;
-            height: auto;
-
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-
-            &:before {
-                position: absolute;
-                content: '';
-                width: 100%;
-                height: 100%;
-                background-color: red;
-            }
-        }
         &:hover {
-            img {
+          .container-phone, .container-iPad {
                 -webkit-filter:blur(4px);
                 filter: blur(4px);
                 -moz-transform: scale(1.4);
@@ -114,4 +106,152 @@
             .overlay { opacity: 1 }
         }
     }
+}
+
+.container-phone, .container-iPad {
+  transition: .3s all;
+	position: relative;
+  transform: translateY(-50%);
+  margin-top: 150px;
+  height: 100%;
+	display: flex;
+	justify-content: center;
+  align-items: flex-end;
+  .phone {
+    width: $iphone-width;
+    height: $iphone-height;
+  }
+  .iPad {
+    width: $ipad-width;
+    height: $ipad-height;
+  }
+	.phone, .iPad {
+		position: relative;
+		border: 4px solid $primary;
+		border-bottom: 0;
+		border-top-left-radius: 24px;
+		border-top-right-radius: 24px;
+		.antenna {
+			&:after {
+				content: '';
+				background: #FFF;
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				left: -4px;
+				top: $iphone-width / 8;
+				width: 4px;
+				height: 6px;
+			}
+			&:before {
+				content: '';
+				background: #FFF;
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				right: -4px;
+				top: $iphone-width / 8;
+				width: 4px;
+				height: 6px;
+			}
+		}
+
+		.sensors {
+			&:after {
+				content: '';
+				position: absolute;
+				background: $primary;
+				width: $sensor-width;
+				border-radius: 4px;
+				height: 6px;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				background: $primary;
+				width: 6px;
+				border-radius: 4px;
+				height: 6px;
+			}
+		}
+		.right-buttons {
+			width: 5px;
+			height: 35px;
+			background: $primary;
+			position: absolute;
+			right: -8px;
+			border-top-right-radius: 16px;
+			border-bottom-right-radius: 16px;
+			top: $iphone-width / 3;
+		}
+		.left-buttons {
+			&:after {
+				content: '';
+				width: 5px;
+				height: 35px;
+				background: $primary;
+				position: absolute;
+				left: -8px;
+				border-top-left-radius: 16px;
+				border-bottom-left-radius: 16px;
+				top: $iphone-width / 3;
+			}
+			&:before {
+				content: '';
+				width: 5px;
+				height: 35px;
+				background: $primary;
+				position: absolute;
+				left: -8px;
+				border-top-left-radius: 16px;
+				border-bottom-left-radius: 16px;
+				top: $iphone-width / 1.8;
+			}
+		}
+		.screen {
+			position: absolute;
+      top: 40px;
+			left: 5px;
+			border-radius: 4px;
+			border-top: 2px;
+			border-right: 2px;
+			border-bottom: 0;
+			border-left: 2px;
+      border-style: solid;
+      border-color: #969696;
+      background: #FFF;
+		}
+  }
+  .iPad {
+    .sensors {
+      &:after {
+				top: $ipad-width / 14;
+				left: $ipad-width / 2 - ($sensor-width / 2);
+			}
+			&:before {
+				top: $ipad-width / 14;
+				left: $ipad-width / 2.8;
+			}
+    }
+    .screen {
+      width: $ipad-width - 18px;
+      height: $ipad-height - 40px;
+    }
+  }
+  .phone {
+    .sensors {
+      &:after {
+				top: $iphone-width / 14;
+				left: $iphone-height / 2 - ($sensor-width / 2);
+			}
+			&:before {
+				top: $iphone-width / 14;
+				left: $iphone-height / 3.4;
+			}
+    }
+    .screen {
+      width: $iphone-width - 18px;
+      height: $iphone-height - 40px;
+    }
+  }
 }

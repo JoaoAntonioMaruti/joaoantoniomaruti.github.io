@@ -12,6 +12,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" type="text/css" />
   <link rel="stylesheet" href="./css/animate.css" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="./js/media.js"></script>
 </head>
 
@@ -40,6 +41,7 @@
   </section>
 
   <section class="about">
+    <div class="me"></div>
     <div class="about__name">
       João Antonio Maruti Milagres
     </div>
@@ -283,7 +285,7 @@
 
           <div class="projects__notes">
             <div class="projects__notes__note">
-              <b>IMPORTANT NOTE:</b> Projects listed below are <b>rights of companies and customers</b> on worked,
+              <b>IMPORTANT:</b> Projects listed below are <b>rights of companies and customers</b> on worked,
               <b>not
                 mine</b>, only I participated at development team.
             </div>
@@ -293,7 +295,15 @@
               <div class="col-sm-6 project-item">
                 <a href="http://mforceapp.com.br/site/home/" target="_blank">
                   <div class="project">
-                    <img src="./assets/mforce.png" alt="">
+                    <div class="container-iPad">
+                      <div class="iPad">
+                        <div class="antenna"></div>
+                        <div class="right-buttons"></div>
+                        <div class="left-buttons"></div>
+                        <div class="sensors"></div>
+                        <img src="assets/mforce.png" class="screen" />
+                      </div>
+                    </div>
                     <div class="overlay">
                       <h2>Avaliable on iPad</h2>
                     </div>
@@ -310,14 +320,23 @@
               </div>
               <div class="col-sm-6 project-item">
                 <div class="project">
-                  <img src="./assets/tim_my_fit.png" alt="">
+                  <div class="container-phone">
+                    <div class="phone">
+                      <div class="antenna"></div>
+                      <div class="right-buttons"></div>
+                      <div class="left-buttons"></div>
+                      <div class="sensors"></div>
+                      <div class="screen"></div>
+                      <img src="assets/construserv.png" class="screen" />
+                    </div>
+                  </div>
                   <div class="overlay">
                     <h2>Coming soon</h2>
                   </div>
                 </div>
                 <div class="project-title">
                   <div class="name">
-                    TIM MY FIT
+                    Construserv Sirenes
                   </div>
                   <div class="description">
                     Coming soon on iOS/Android
@@ -327,14 +346,23 @@
               <div class="col-sm-6 project-item">
                 <a href="https://itunes.apple.com/us/app/vivo-mulher/id1177485183?l=pt&ls=1&mt=8" target="_blank">
                   <div class="project">
-                    <img src="./assets/vivo_mulher.png" alt="">
+                    <div class="container-phone">
+                      <div class="phone">
+                        <div class="antenna"></div>
+                        <div class="right-buttons"></div>
+                        <div class="left-buttons"></div>
+                        <div class="sensors"></div>
+                        <div class="screen"></div>
+                        <img src="assets/vivo_mulher.png" class="screen" />
+                      </div>
+                    </div>
                     <div class="overlay">
                       <h2>Avaliable on iOS/Android</h2>
                     </div>
                   </div>
                   <div class="project-title">
                     <div class="name">
-                      Vivo Mulher
+                      Vivo Estilo
                     </div>
                     <div class="description">
                       Avaliable on iOS/Android.
@@ -346,7 +374,16 @@
                 <a href="https://itunes.apple.com/us/app/vivo-espiritualidade/id1131348130?l=pt&ls=1&mt=8"
                   target="_blank">
                   <div class="project">
-                    <img src="./assets/espiritualidade.png" alt="">
+                    <div class="container-phone">
+                      <div class="phone">
+                        <div class="antenna"></div>
+                        <div class="right-buttons"></div>
+                        <div class="left-buttons"></div>
+                        <div class="sensors"></div>
+                        <div class="screen"></div>
+                        <img src="assets/vivo_espiritualidade.png" class="screen" />
+                      </div>
+                    </div>
                     <div class="overlay">
                       <h2>Avaliable on iOS/Android</h2>
                     </div>
@@ -369,6 +406,31 @@
           <div class="projects__container">
             <div class="container">
               <div class="row">
+
+                <div class="col-sm-6 project-item">
+                  <div class="project__codepen">
+                    <p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result"
+                      data-user="JoaoAntonioMaruti" data-slug-hash="aboLZMW"
+                      style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                      data-pen-title="iPhone card  to show projects in my personal website">
+                      <span>See the Pen <a href="https://codepen.io/JoaoAntonioMaruti/pen/aboLZMW/">
+                          iPhone card to show projects in my personal website</a> by Joao Antonio (<a
+                          href="https://codepen.io/JoaoAntonioMaruti">@JoaoAntonioMaruti</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                  </div>
+                  <div class="project-title">
+                    <a href="https://codepen.io/JoaoAntonioMaruti/pen/aboLZMW/" target="_blank">
+                      <div class="name">
+                        iPhone card to show projects in my personal website
+                      </div>
+                      <div class="description">
+                        View sorce code on codepen.
+                      </div>
+                    </a>
+                  </div>
+                </div>
 
                 <div class="col-sm-6 project-item">
                   <div class="project__codepen">
@@ -412,31 +474,6 @@
                     <a href="https://codepen.io/JoaoAntonioMaruti/pen/xGeRvX/" target="_blank">
                       <div class="name">
                         JAKE ADIVENTURE TIME SASS
-                      </div>
-                      <div class="description">
-                        View sorce code on codepen.
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-sm-6 project-item">
-                  <div class="project project__codepen">
-                    <p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result"
-                      data-user="JoaoAntonioMaruti" data-slug-hash="NqqEdV"
-                      style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                      data-pen-title="PURE CSS MARIO GAME 8BITS ">
-                      <span>See the Pen <a href="https://codepen.io/JoaoAntonioMaruti/pen/NqqEdV/">
-                          PURE CSS MARIO GAME 8BITS </a> by Joao Antonio (<a
-                          href="https://codepen.io/JoaoAntonioMaruti">@JoaoAntonioMaruti</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  </div>
-                  <div class="project-title">
-                    <a href="https://codepen.io/JoaoAntonioMaruti/pen/NqqEdV/" target="_blank">
-                      <div class="name">
-                        PURE CSS MARIO GAME 8BITS
                       </div>
                       <div class="description">
                         View sorce code on codepen.
@@ -591,6 +628,13 @@
           </span>
         </div>
       </section>
+
+      <div class="instagram">
+        <div class="content__title">
+          Instagram
+        </div>
+        <div id="instagram-content" class="owl-carousel owl-theme"></div>
+      </div>
     </main>
   </section>
   <secition class="footer">
@@ -643,6 +687,8 @@
     </footer>
   </secition>
 
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script type="text/javascript" src="./js/index.js"></script>
 
   <!-- Global Site Tag (gtag.js) - Google Analytics -->

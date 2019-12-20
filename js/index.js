@@ -142,4 +142,84 @@ var initForm = function () {
   })
 }
 
-document.onload = initForm()
+var renderInstagramBlock = function (content) {
+
+  console.log(content.images)
+
+  var media = content.videos ? `
+    <video
+      autoplay
+      loop
+      src="${content.videos.standard_resolution.url}"
+      width="350"
+      height="${content.videos.standard_resolution.height}">
+      align="middle"
+    </video>
+  ` : `
+    <img align="middle" src="${content.images.low_resolution.url}">
+  `
+
+  return `
+    <div class="item">
+      ${media}
+      <div class="instagram-overlay">
+        <div class="instagram-action">
+          <div class="instagram-likes">
+            <i class="fa fa-heart"></i> ${content.likes.count}
+          </div>
+          <div class="instagram-comments">
+            <i class="fa fa-comment"></i> ${content.comments.count}
+          </div>
+        </div>
+      </div>
+    </div>
+  `
+}
+
+var initCarousel = function() {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    items: 2,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 3
+        },
+        1000: {
+            items: 5
+        }
+    }
+  });
+}
+
+var fethInstagram = function() {
+  var token = '1714785323.f530f8f.e3306fe49085443786585358de659cf0',
+  num_photos = 99999999999;
+
+  $.ajax({
+    url: 'https://api.instagram.com/v1/users/self/media/recent',
+    dataType: 'jsonp',
+    type: 'GET',
+    data: {access_token: token, count: num_photos},
+    success: function(response){
+      for( x in response.data ) {
+        $('#instagram-content').append(renderInstagramBlock(response.data[x]));
+      }
+      initCarousel();
+    },
+    error: function(data){
+      console.log(data);
+    }
+  });
+}
+
+var bootstrapApp = function() {
+  fethInstagram()
+  initForm()
+}
+
+document.onload = bootstrapApp()
