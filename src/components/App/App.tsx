@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Computer from 'src/components/Computer';
 import LanguageSwitch from 'src/components/LanguageSwitch';
 
+import { About } from 'src/components/Slides';
+
 import { useTranslation } from 'react-i18next';
 
 type SectionType = {
@@ -36,7 +38,7 @@ export default function App() {
               <StyledName>João Antonio Maruti Milagres</StyledName>
               <StyledPosition>{t('position')}</StyledPosition>
               <StyledCompany>
-                <FontAwesomeIcon icon={['far', 'building']} />  brainn.co
+                <FontAwesomeIcon icon={['far', 'building']} /> brainn.co
               </StyledCompany>
             </StyledInfo>
           </StyledComputer>
@@ -45,7 +47,7 @@ export default function App() {
       name: 'Home',
     },
     {
-      component: <h1>Second section</h1>,
+      component: <About />,
       name: 'Section b',
     },
   ] as SectionType[];
