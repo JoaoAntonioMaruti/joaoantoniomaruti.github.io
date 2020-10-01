@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Computer from 'src/components/Computer';
+import LanguageSwitch from 'src/components/LanguageSwitch';
 
 import { useTranslation } from 'react-i18next';
 
@@ -20,19 +21,22 @@ type SectionItemType = {
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [t, i18n] = useTranslation();
+  const [t] = useTranslation();
 
   const slides = [
     {
       component: (
         <StyledSlideContainer>
+          <StyledLanguageSwitchContainer>
+            <LanguageSwitch />
+          </StyledLanguageSwitchContainer>
           <StyledComputer>
             <Computer />
             <StyledInfo>
               <StyledName>João Antonio Maruti Milagres</StyledName>
               <StyledPosition>{t('position')}</StyledPosition>
               <StyledCompany>
-                {/** <FontAwesomeIcon icon={['far', 'coffee']} /> **/} brainn.co
+                <FontAwesomeIcon icon={['far', 'building']} />  brainn.co
               </StyledCompany>
             </StyledInfo>
           </StyledComputer>
@@ -60,10 +64,6 @@ export default function App() {
         })}
       </Sections>
 
-      <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-      <button onClick={() => i18n.changeLanguage('pt')}>PT</button>
-
-
       <FullPage active={currentSlide}>
         {slides.map((slide, index) => {
           return <Slide key={index}>{slide.component}</Slide>;
@@ -72,6 +72,11 @@ export default function App() {
     </>
   );
 }
+
+const StyledLanguageSwitchContainer = styled.div`
+  position: absolute;
+  right: 16px;
+`;
 
 const Sections = styled.div`
   height: 100px;

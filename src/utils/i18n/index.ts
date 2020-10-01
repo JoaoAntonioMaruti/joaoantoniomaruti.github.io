@@ -11,15 +11,15 @@ const resources = {
   pt,
 };
 
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    resources,
-    lng: defaultLanguage,
-    keySeparator: false, // we do not use keys in form messages.welcome
-    interpolation: {
-      escapeValue: false, // react already safes from xss
-    },
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: defaultLanguage,
+  keySeparator: false,
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;
+
+export { defaultLanguage };
