@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Computer from 'src/components/Computer';
 
+import { useTranslation } from 'react-i18next';
+
 type SectionType = {
   component: JSX.Element;
   name: string;
@@ -18,6 +20,8 @@ type SectionItemType = {
 export default function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const [t, i18n] = useTranslation();
+
   const slides = [
     {
       component: (
@@ -26,9 +30,9 @@ export default function App() {
             <Computer />
             <StyledInfo>
               <StyledName>João Antonio Maruti Milagres</StyledName>
-              <StyledPosition>Brazillian software engineer</StyledPosition>
+              <StyledPosition>{t('position')}</StyledPosition>
               <StyledCompany>
-                { /** <FontAwesomeIcon icon={['far', 'coffee']} /> **/} brainn.co
+                {/** <FontAwesomeIcon icon={['far', 'coffee']} /> **/} brainn.co
               </StyledCompany>
             </StyledInfo>
           </StyledComputer>
@@ -56,13 +60,13 @@ export default function App() {
         })}
       </Sections>
 
+      <button onClick={() => i18n.changeLanguage('en')}>EN</button>
+      <button onClick={() => i18n.changeLanguage('pt')}>PT</button>
+
+
       <FullPage active={currentSlide}>
         {slides.map((slide, index) => {
-          return (
-            <Slide key={index}>
-              {slide.component}
-            </Slide>
-          );
+          return <Slide key={index}>{slide.component}</Slide>;
         })}
       </FullPage>
     </>
