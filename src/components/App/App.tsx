@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Computer from 'src/components/Computer';
 import LanguageSwitch from 'src/components/LanguageSwitch';
 
-import { About } from 'src/components/Slides';
+import { About, Stack, Community } from 'src/components/Slides';
 
 import { useTranslation } from 'react-i18next';
 
@@ -48,7 +48,15 @@ export default function App() {
     },
     {
       component: <About />,
-      name: 'Section b',
+      name: 'About me',
+    },
+    {
+      component: <Stack />,
+      name: 'Stack',
+    },
+    {
+      component: <Community />,
+      name: 'Community',
     },
   ] as SectionType[];
 
@@ -66,7 +74,7 @@ export default function App() {
         })}
       </Sections>
 
-      <FullPage active={currentSlide}>
+      <FullPage active={currentSlide} initialSlide={2}>
         {slides.map((slide, index) => {
           return <Slide key={index}>{slide.component}</Slide>;
         })}

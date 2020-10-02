@@ -4,7 +4,15 @@ import { initReactI18next } from 'react-i18next';
 import { en } from './en';
 import { pt } from './pt';
 
-const defaultLanguage = navigator.language === 'pt-BR' ? 'pt' : 'en';
+const urlParams = new URLSearchParams(window.location.search);
+const langQueryParam = urlParams.get('lang') as 'pt' | 'en';
+
+const defaultLanguage =
+  langQueryParam === 'pt' || langQueryParam === 'en'
+    ? langQueryParam
+    : navigator.language === 'pt-BR'
+    ? 'pt'
+    : 'en';
 
 const resources = {
   en,

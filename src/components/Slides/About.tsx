@@ -15,9 +15,7 @@ export default function About() {
   return (
     <BaseLayout background={'#f0e1e1'}>
       <StyledTextContainer>
-        <Text type="Xlarge" fontWeight={500}>
-          {t('aboutTitle')}
-        </Text>
+        <Text type="Xlarge">{t('aboutTitle')}</Text>
       </StyledTextContainer>
       <Text>{t('aboutDescription')}</Text>
       <StyledButtontContainer>

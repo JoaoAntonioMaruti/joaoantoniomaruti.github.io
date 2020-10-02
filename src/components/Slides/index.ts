@@ -1,3 +1,5 @@
-import About from './About'
+import About from './About';
+import Stack from './Stack';
+import Community from './Community';
 
-export { About }
+export { About, Stack, Community };
